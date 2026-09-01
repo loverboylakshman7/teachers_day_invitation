@@ -78,3 +78,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+
+
+/* =====================================
+   EVENT ACCORDION
+===================================== */
+
+const eventAccordions =
+    document.querySelectorAll(".event-accordion");
+
+
+eventAccordions.forEach(function (accordion) {
+
+
+    const trigger =
+        accordion.querySelector(".event-trigger");
+
+
+    trigger.addEventListener(
+        "click",
+        function () {
+
+
+            const isActive =
+                accordion.classList.contains("active");
+
+
+            /* Close all events */
+
+            eventAccordions.forEach(
+                function (item) {
+
+                    item.classList.remove("active");
+
+                }
+            );
+
+
+            /* Open selected event */
+
+            if (!isActive) {
+
+                accordion.classList.add("active");
+
+            }
+
+        }
+    );
+
+
+});
