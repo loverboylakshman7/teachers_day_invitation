@@ -953,3 +953,236 @@ body {
     }
 
 }
+
+/* =========================================
+   PROFESSIONAL PAGE TRANSITIONS
+========================================= */
+
+/* PAGE ENTER */
+
+body {
+    animation: pageEnter 0.7s ease forwards;
+}
+
+@keyframes pageEnter {
+
+    from {
+        opacity: 0;
+        transform: scale(1.015);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* PAGE EXIT */
+
+body.page-exit {
+    animation: pageExit 0.45s ease forwards;
+}
+
+@keyframes pageExit {
+
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.985);
+    }
+
+}
+
+
+/* =========================================
+   LOADING SCREEN
+========================================= */
+
+.page-loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #2a1045,
+            #10061f 65%,
+            #07030e
+        );
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+
+}
+
+
+.loader-hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+.loader-content {
+
+    text-align: center;
+
+    animation:
+        loaderAppear 0.8s ease;
+
+}
+
+
+.loader-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation:
+        loaderFloat 2s ease-in-out infinite;
+
+}
+
+
+.loader-content h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 32px;
+
+    letter-spacing: 2px;
+
+    color: #ffe0f1;
+
+}
+
+
+.loader-content p {
+
+    margin-top: 8px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 28px;
+
+    color: #ff9ed7;
+
+}
+
+
+/* LOADING LINE */
+
+.loader-line {
+
+    width: 240px;
+
+    height: 3px;
+
+    margin: 25px auto 0;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+}
+
+
+.loader-line span {
+
+    display: block;
+
+    width: 40%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff5fb7,
+            #b75cff,
+            #69cfff
+        );
+
+    animation:
+        loadingMove 1.3s ease-in-out infinite;
+
+}
+
+
+/* =========================================
+   LOADER ANIMATIONS
+========================================= */
+
+@keyframes loaderFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+@keyframes loaderAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes loadingMove {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(350%);
+    }
+
+}
