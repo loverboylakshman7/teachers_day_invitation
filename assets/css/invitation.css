@@ -1,0 +1,955 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    color: white;
+
+    background: #0b071d;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ================================
+   PAGE BACKGROUND
+================================ */
+
+.invitation-page {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(10, 5, 28, 0.72),
+            rgba(45, 20, 70, 0.35),
+            rgba(10, 5, 28, 0.65)
+        ),
+
+        url("../images/invitation-bg.png");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 28px 60px;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: white;
+
+}
+
+
+.brand-icon {
+
+    font-size: 35px;
+
+}
+
+
+.brand-text h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+}
+
+
+.brand-text span {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    padding-bottom: 8px;
+
+}
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    bottom: 0;
+
+    left: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff79c6,
+            #846cff
+        );
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover::after,
+
+.nav-links .active::after {
+
+    width: 100%;
+
+}
+
+
+.nav-links a:hover,
+
+.nav-links .active {
+
+    color: white;
+
+}
+
+
+/* ================================
+   MAIN INVITATION AREA
+================================ */
+
+.invitation-content {
+
+    flex: 1;
+
+    width: min(1300px, 92%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding:
+
+        20px
+        0
+        30px;
+
+}
+
+
+/* ================================
+   LEFT CONTENT
+================================ */
+
+.invitation-text {
+
+    text-align: center;
+
+}
+
+
+.cordially {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 48px;
+
+    color: #ffd2eb;
+
+}
+
+
+.line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin:
+
+        5px
+        0
+        25px;
+
+    color: #ff8fcf;
+
+}
+
+
+.line span {
+
+    width: 100px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff9ed7
+        );
+
+}
+
+
+.line span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff9ed7,
+            transparent
+        );
+
+}
+
+
+.college-name {
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+}
+
+
+.invite-message {
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: rgba(255,255,255,0.75);
+
+}
+
+
+.invitation-text h1 {
+
+    margin-top: 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 5vw, 85px);
+
+    line-height: 1;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ffd7ef,
+            #db8fff,
+            #9fdcff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.invitation-text h2 {
+
+    margin-top: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 35px;
+
+    letter-spacing: 13px;
+
+    color: #f5dff3;
+
+}
+
+
+.message {
+
+    max-width: 550px;
+
+    margin:
+
+        30px
+        auto
+        0;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,0.82);
+
+}
+
+
+/* ================================
+   FLOATING CARD
+================================ */
+
+.card-area {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.invitation-card {
+
+    width: min(470px, 100%);
+
+    padding:
+
+        50px
+        45px;
+
+    border-radius: 28px;
+
+    position: relative;
+
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(85, 35, 110, 0.62),
+            rgba(20, 15, 50, 0.78)
+        );
+
+
+    border:
+
+        1px solid
+        rgba(255,255,255,0.3);
+
+
+    backdrop-filter:
+
+        blur(16px);
+
+
+    box-shadow:
+
+        0 30px 70px
+        rgba(0,0,0,0.5),
+
+        0 0 40px
+        rgba(230,100,255,0.3),
+
+        inset
+        0 1px 2px
+        rgba(255,255,255,0.2);
+
+
+    animation:
+
+        floatingCard
+        5s ease-in-out
+        infinite;
+
+}
+
+
+/* CARD GLOW */
+
+.invitation-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: inherit;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,120,220,0.7),
+            transparent
+        );
+
+    filter: blur(8px);
+
+    z-index: -1;
+
+    opacity: 0.7;
+
+}
+
+
+.card-top-decoration,
+
+.card-bottom-decoration {
+
+    text-align: center;
+
+    color: #ff9fd8;
+
+    letter-spacing: 8px;
+
+    font-size: 18px;
+
+}
+
+
+.card-bottom-decoration {
+
+    margin-top: 30px;
+
+}
+
+
+.card-invited {
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 40px;
+
+    color: #ffd5ed;
+
+    margin-top: 18px;
+
+}
+
+
+.card-line {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ff8fcc;
+
+    margin:
+
+        10px
+        0
+        30px;
+
+}
+
+
+.card-line span {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: #c17be7;
+
+}
+
+
+/* ================================
+   EVENT DETAILS
+================================ */
+
+.detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding:
+
+        18px
+        0;
+
+    border-bottom:
+
+        1px solid
+        rgba(255,255,255,0.12);
+
+}
+
+
+.detail-icon {
+
+    font-size: 28px;
+
+    filter:
+
+        drop-shadow(
+            0 0 8px
+            rgba(255,150,220,0.6)
+        );
+
+}
+
+
+.detail h4 {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #ffb4df;
+
+}
+
+
+.detail p {
+
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: rgba(255,255,255,0.8);
+
+}
+
+
+/* ================================
+   EVENT BUTTON
+================================ */
+
+.next-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.event-btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding:
+
+        18px
+        38px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    font-weight: 600;
+
+
+    background:
+
+        linear-gradient(
+            100deg,
+            #d62c82,
+            #9239db,
+            #684cff
+        );
+
+
+    border:
+
+        1px solid
+        rgba(255,255,255,0.4);
+
+
+    box-shadow:
+
+        0 10px 35px
+        rgba(210,50,220,0.5);
+
+
+    animation:
+
+        buttonFloat
+        3.5s ease-in-out
+        infinite;
+
+}
+
+
+.event-btn b {
+
+    font-size: 22px;
+
+    font-weight: 300;
+
+}
+
+
+.event-btn:hover {
+
+    transform:
+
+        translateY(-5px)
+        scale(1.05);
+
+}
+
+
+/* ================================
+   PAGE PROGRESS
+================================ */
+
+.page-progress {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding:
+
+        20px
+        0
+        25px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.page-progress div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.page-progress span {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,0.4);
+
+    font-size: 12px;
+
+}
+
+
+.page-progress small {
+
+    margin-top: 6px;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    color: rgba(255,255,255,0.6);
+
+}
+
+
+.page-progress .current span {
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #e54098,
+            #7d4dff
+        );
+
+    box-shadow:
+
+        0 0 18px
+        #c85cff;
+
+}
+
+
+.progress-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background:
+
+        rgba(255,255,255,0.25);
+
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+
+        transform:
+
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+
+            translateY(-18px)
+            rotate(0.5deg);
+
+    }
+
+}
+
+
+@keyframes buttonFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 850px) {
+
+
+    .navbar {
+
+        padding:
+
+            20px
+            25px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 18px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 10px;
+
+    }
+
+
+    .invitation-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding:
+
+            40px
+            0;
+
+    }
+
+
+    .invitation-card {
+
+        padding:
+
+            40px
+            30px;
+
+    }
+
+
+    .invitation-text h2 {
+
+        letter-spacing: 8px;
+
+    }
+
+
+    .page-progress {
+
+        gap: 10px;
+
+    }
+
+
+    .progress-line {
+
+        width: 35px;
+
+    }
+
+
+    .page-progress small {
+
+        font-size: 6px;
+
+    }
+
+}
